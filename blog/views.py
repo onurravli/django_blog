@@ -6,10 +6,6 @@ from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
 
 
-def index(request: HttpRequest):
-    return HttpResponse("Server is running.")
-
-
 def get_all_posts(request: HttpRequest) -> JsonResponse:
     return JsonResponse(
         dict(
